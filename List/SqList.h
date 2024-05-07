@@ -32,6 +32,5 @@ void del_x_1(SqList *L, ElemType x);
 // 删除顺序表里所有相同的元素
 void del_x_2(SqList *L, ElemType x);
 
-void printSqList(SqList *L);
 
 #endif /* SqList_h */

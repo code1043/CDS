@@ -7,8 +7,21 @@
 
 #include "SqList.h"
 
+void printSqList(const char *msg, SqList *L) {
+
+    //查看顺序表里的元素
+    
+    printf("执行%s函数\n",msg);
+    printf("顺序表里的元素: ");
+    for (int i = 0; i < L->length; i++) {
+        printf("%d ", L->data[i]);
+    }
+    printf("\n--------------------------------------------\n");
+}
+
 void ListInit(SqList *L) {
     L->length = 0;
+    printSqList("ListInit", L);
 }
 
 //插入
@@ -29,7 +42,7 @@ bool ListInsert(SqList *L, int i, ElemType e) {
     
     L->data[i - 1] = e; //将位置i存放e
     L->length++;        //长度+1
-
+    printSqList("ListInsert", L);
     return true;
 }
 
@@ -48,7 +61,7 @@ bool ListDelete(SqList *L, int i, ElemType *e) {
     }
 
     L->length--; //顺序表长度-1
-
+    printSqList("ListDelete", L);
     return true;
 }
 
@@ -64,7 +77,7 @@ void del_x_1(SqList *L, ElemType x) {
     }
 
     L->length = k; //顺序表工的长度等于k
-
+    printSqList("del_x_1", L);
     
 }
 
@@ -80,17 +93,9 @@ void del_x_2(SqList *L, ElemType x) {
         i++;
     }
     L->length = L->length - k; ////顺序表工的长度递减
+    printSqList("del_x_2", L);
 }
 
-void printSqList(SqList *L) {
-
-    //查看顺序表里的元素
-    printf("顺序表里的元素: ");
-    for (int i = 0; i < L->length; i++) {
-        printf("%d ", L->data[i]);
-    }
-    printf("\n");
-}
 
 
 
