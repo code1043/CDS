@@ -6,9 +6,11 @@
 //
 
 #include "list_w_app.h"
+#include "list_app.h"
 
 int main(void) {
+
+    list_sq_app();
     
-    list_w_app();
     return 0;
 }
