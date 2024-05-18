@@ -12,4 +12,6 @@
 
 void list_sq_app(void);
 
+void list_link_app(void);
+
 #endif /* List_app_h */
