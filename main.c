@@ -10,7 +10,8 @@
 
 int main(void) {
 
-    list_sq_app();
+//    list_sq_app();
+    list_link_app();
     
     return 0;
 }
